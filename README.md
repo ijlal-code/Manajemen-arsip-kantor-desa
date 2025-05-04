@@ -9,7 +9,7 @@
 
 <br>
 
-<h2><strong>Ainun Ijlal</strong></h2>
+<h3>Ainun Ijlal</h3>
 <h3>D0223038</h3>
 
 <br>
