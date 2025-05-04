@@ -1,16 +1,24 @@
-# <p align="center" style="margin-bottom: 0px;">SIPAGI</p>
- ## <p align="center" style="margin-top: 0;">SISTEM PENJADWALAN GUDANG GABAH TERINTEGRASI</p>
+<div align="center">
 
- <div align="center">
+# MANSIP  
+### *(Manajemen Arsip Kantor Desa)*
+
+<br>
+
 ![Image](https://github.com/user-attachments/assets/a67c3794-246e-4ad4-afb6-cbe2a894abb9)
- </div>
- 
- ### <p align="center">AHMAD KHANIF IZZAH ARIFIN</p>
- ### <p align="center">D0223511</p></br>
- ### <p align="center">Framework Web Based</p>
- ### <p align="center">2025</p>
- 
- ---
+
+<br>
+
+<h2><strong>Ainun Ijlal</strong></h2>
+<h3>D0223038</h3>
+
+<br>
+
+<h4>Framework Web Based</h4>
+<h4>2025</h4>
+
+</div>
+
 ## Role dan Fitur-fiturnya
 
 ### Admin
