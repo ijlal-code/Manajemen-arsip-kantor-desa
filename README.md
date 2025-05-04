@@ -1,25 +1,31 @@
-# MANSIP 
-(Manajemen Arsip Kantor Desa)
+                                                            # MANSIP 
+                                                            (Manajemen Arsip Kantor Desa)
+                                                            
+                                                            ![Image](https://github.com/user-attachments/assets/a67c3794-246e-4ad4-afb6-cbe2a894abb9)
+                                                            
+                                                            Ainun Ijlal
+                                                            D0223038
+                                                            
+                                                            Framework Web Based
+                                                            2025
 
-![Image](https://github.com/user-attachments/assets/a67c3794-246e-4ad4-afb6-cbe2a894abb9)
+## Role dan Fitur-fiturnya
 
-## 📌 Fitur Utama
-
-### 👤 Admin
+### Admin
 - Mengelola pengguna (CRUD User)
 - Mengelola kategori arsip
 - Melihat semua arsip
 
-### 🧾 Sekretaris Desa
+### Sekretaris Desa
 - Upload arsip baru
 - Melihat dan mengedit arsip yang diunggah
 - Menghapus arsip
 
-### 🧑‍💼 Kepala Desa
+### Kepala Desa
 - Melihat daftar arsip
 - Mencetak / mengunduh arsip (PDF / DOCX)
 
-## 🗃️ Struktur Database
+## Tabel-tabel database beserta field dan tipe datanya
 
 ### Tabel `users`
 | Field       | Tipe Data    | Keterangan                  |
@@ -52,7 +58,7 @@
 | created_at    | TIMESTAMP    | Timestamp dibuat                 |
 | updated_at    | TIMESTAMP    | Timestamp diperbarui             |
 
-## 🔄 Relasi Antar Tabel
+## Jenis relasi dan tabel yang berelasi
 
 - **One-to-Many:** `users` → `arsip`
 - **One-to-Many:** `kategori_arsip` → `arsip`
