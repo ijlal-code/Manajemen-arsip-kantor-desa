@@ -6,13 +6,14 @@
 ![Image](https://github.com/user-attachments/assets/a67c3794-246e-4ad4-afb6-cbe2a894abb9)
 
 <h2><strong>Ainun Ijlal</strong></h2>
-<p><strong>D0223038</strong><br>
-Framework Web Based<br>
-2025</p>
+<h3>D0223038</h3>
+
+<br>
+
+<h4>Framework Web Based</h4>
+<h4>2025</h4>
 
 </div>
-
-
 
 
 ## Role dan Fitur-fiturnya
