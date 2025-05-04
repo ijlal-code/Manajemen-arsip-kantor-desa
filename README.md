@@ -9,8 +9,8 @@
 
 <br>
 
-<h3>Ainun Ijlal</h3>
-<h3>D0223038</h3>
+<h2>Ainun Ijlal</h2>
+<h2>D0223038</h2>
 
 <br>
 
