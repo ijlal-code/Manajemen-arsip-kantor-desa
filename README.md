@@ -1,16 +1,16 @@
-<div align="center">
-
-# MANSIP  
-### *(Manajemen Arsip Kantor Desa)*
-
-![Image](https://github.com/user-attachments/assets/a67c3794-246e-4ad4-afb6-cbe2a894abb9)
-
-### <p align="center">Ainun Ijlal</p>
- ### <p align="center">D0223038</p></br>
+# <p align="center" style="margin-bottom: 0px;">SIPAGI</p>
+ ## <p align="center" style="margin-top: 0;">SISTEM PENJADWALAN GUDANG GABAH TERINTEGRASI</p>
+ 
+ <p align="center">
+   ![Image](https://github.com/user-attachments/assets/a67c3794-246e-4ad4-afb6-cbe2a894abb9)
+ </p>
+ 
+ ### <p align="center">AHMAD KHANIF IZZAH ARIFIN</p>
+ ### <p align="center">D0223511</p></br>
  ### <p align="center">Framework Web Based</p>
  ### <p align="center">2025</p>
- </div>
  
+ ---
 ## Role dan Fitur-fiturnya
 
 ### Admin
