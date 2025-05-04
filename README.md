@@ -6,11 +6,12 @@
 ![Image](https://github.com/user-attachments/assets/a67c3794-246e-4ad4-afb6-cbe2a894abb9)
 
 <h2><strong>Ainun Ijlal</strong></h2>
-<h3>D0223038</h3>
-<h3>Framework Web Based</h3>
-<h3>2025</h3>
+<p><strong>D0223038</strong><br>
+Framework Web Based<br>
+2025</p>
 
 </div>
+
 
 
 
