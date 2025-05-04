@@ -1,9 +1,9 @@
 # <p align="center" style="margin-bottom: 0px;">SIPAGI</p>
  ## <p align="center" style="margin-top: 0;">SISTEM PENJADWALAN GUDANG GABAH TERINTEGRASI</p>
- 
- <p align="center">
-   ![Image](https://github.com/user-attachments/assets/a67c3794-246e-4ad4-afb6-cbe2a894abb9)
- </p>
+
+ <div align="center">
+![Image](https://github.com/user-attachments/assets/a67c3794-246e-4ad4-afb6-cbe2a894abb9)
+ </div>
  
  ### <p align="center">AHMAD KHANIF IZZAH ARIFIN</p>
  ### <p align="center">D0223511</p></br>
