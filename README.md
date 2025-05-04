@@ -5,7 +5,9 @@
 
 <br>
 
-![Image](https://github.com/user-attachments/assets/a67c3794-246e-4ad4-afb6-cbe2a894abb9)
+<p align="center">
+   <img src="LogoUnsulbar.png" alt="SmartPresence Logo" width="300"/>
+ </p>
 
 <br>
 
