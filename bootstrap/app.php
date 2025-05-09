@@ -11,7 +11,15 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        // Middleware global (opsional)
+        // $middleware->append(\App\Http\Middleware\ExampleGlobalMiddleware::class);
+
+        // Route middleware (ini yang kamu butuhkan)
+        $middleware->alias([
+            'admin' => \App\Middleware\AdminMiddleware::class,
+            'sekretaris' => \App\Middleware\SekretarisMiddleware::class,
+            'kepala' => \App\Middleware\KepalaMiddleware::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
