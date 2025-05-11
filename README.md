@@ -11,7 +11,7 @@
 
 <br>
 
-<h2>AiIjlal</h2>
+<h2>Ainun Ijlal</h2>
 <h2>D0223038</h2>
 
 <br>
