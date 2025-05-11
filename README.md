@@ -25,11 +25,11 @@
 
 ### Admin
 - Mengelola pengguna (CRUD User)
-- Mengelola kategori arsip
 - Melihat semua arsip
 
 ### Sekretaris Desa
 - Upload arsip baru
+- Mengelola kategori arsip
 - Melihat dan mengedit arsip yang diunggah
 - Menghapus arsip
 
@@ -70,8 +70,30 @@
 | created_at    | TIMESTAMP    | Timestamp dibuat                 |
 | updated_at    | TIMESTAMP    | Timestamp diperbarui             |
 
+### Tabel `profiles` (One-to-One)
+| Field      | Tipe Data    | Keterangan                   |
+|------------|--------------|------------------------------|
+| id         | BIGINT       | Primary Key                  |
+| user_id    | BIGINT       | Foreign Key ke `users`       |
+| alamat     | String       | Alamat pengguna              |
+| no_hp      | String       | Nomor HP pengguna            |
+| created_at | TIMESTAMP    | Timestamp dibuat             |
+| updated_at | TIMESTAMP    | Timestamp diperbarui         |
+
+### Tabel `arsip_user` (Many-to-Many - Pivot)
+| Field      | Tipe Data    | Keterangan                           |
+|------------|--------------|--------------------------------------|
+| id         | BIGINT       | Primary Key                          |
+| arsip_id   | BIGINT       | Foreign Key ke `arsip`               |
+| user_id    | BIGINT       | Foreign Key ke `users`               |
+| created_at | TIMESTAMP    | Timestamp dibuat                     |
+| updated_at | TIMESTAMP    | Timestamp diperbarui                 |
+
 ## Jenis relasi dan tabel yang berelasi
 
-- **One-to-Many:** `users` → `arsip`
-- **One-to-Many:** `kategori_arsip` → `arsip`
+- **One-to-Many:** `users` → `arsip`  
+- **One-to-Many:** `kategori_arsip` → `arsip`  
+- **One-to-One:** `users` ↔ `profiles`  
+- **Many-to-Many:** `arsip` ↔ `users` melalui `arsip_user`
+
 
