@@ -6,7 +6,7 @@
 <br>
 
 <p align="center">
-   <img src="LogoUnsulbar.png" alt="SmartPresence Logo" width="300"/>
+   <img src="LogoUnsulbar.png" alt="Logo" width="300"/>
  </p>
 
 <br>
