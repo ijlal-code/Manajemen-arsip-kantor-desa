@@ -10,11 +10,11 @@
 
                     <li class="nav-item">
     @if(auth()->user()->profil)
-        <a class="nav-link" >
+        <a class="nav-link" href="{{ route('profil.show') }}">
             <i class="bi bi-person-circle" title="Lihat Profil"></i>
         </a>
     @else
-        <a class="nav-link" href="">Buat Profil</a>
+        <a class="nav-link" href="{{ route('profil.create') }}">Buat Profil</a>
     @endif
 </li>
 

@@ -11,6 +11,7 @@ class Arsip extends Model
 
     protected $fillable = ['judul_arsip', 'file_arsip', 'tanggal_upload', 'kategori_id', 'user_id'];
 
+   
     public function kategori()
     {
         return $this->belongsTo(KategoriArsip::class, 'kategori_id');
@@ -22,6 +23,8 @@ class Arsip extends Model
     }
 
     public function aksesUsers() {
-        return $this->belongsToMany(Arsip::class, 'arsip_user');
+        return $this->belongsToMany(User::class, 'arsip_user')
+        ->using(ArsipUser::class) // Tambahkan ini
+        ->withTimestamps();
     }
 }

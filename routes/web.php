@@ -15,13 +15,15 @@ Route::get('/', function () {
 
 
 
-Route::resource('user', UserController::class);
-Route::resource('kategori', KategoriController::class);
-Route::resource('arsip', ArsipController::class);
+
+// Route::resource('arsip', ArsipController::class);
+
 
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [AuthController::class, 'register'])->name('regis');
 
 // Setelah login
 Route::get('/dashboard', function () {
@@ -49,6 +51,50 @@ Route::post('/admin/users', [UserController::class, 'store'])->name('users.store
 // Proses update user
 Route::put('/admin/users/{id}', [UserController::class, 'update'])->name('users.update');
 Route::delete('/admin/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
+Route::get('/admin/arsip/{id}', [ArsipController::class, 'show'])->name('admin.arsip.show');
+Route::get('/admin/arsip/{id}/edit', [ArsipController::class, 'edit'])->name('admin.arsip.edit');
+Route::put('/admin/arsip/{id}', [ArsipController::class, 'update'])->name('admin.arsip.update');
+Route::delete('/admin/arsip/{id}', [ArsipController::class, 'destroy'])->name('admin.arsip.destroy');
 Route::get('/admin/arsip/{id}/download', [ArsipController::class, 'download'])->name('admin.arsip.download');
 });
+
+
+Route::middleware(['auth', 'sekretaris'])->group(function () {
+// Kategori - Khusus Sekretarris
+Route::get('/sekretaris/kategori', [KategoriController::class, 'index'])->name('sekretaris.kategori.index');
+// Arsip - Khusus Sekretaris
+Route::get('/sekretaris/arsip', [ArsipController::class, 'index'])->name('sekretaris.arsip.index');
+Route::get('/sekretaris/arsip/create', [ArsipController::class, 'create'])->name('sekretaris.arsip.create');
+Route::post('/sekretaris/arsip/store', [ArsipController::class, 'store'])->name('sekretaris.arsip.store');
+Route::get('/sekretaris/arsip/{id}', [ArsipController::class, 'show'])->name('arsip.show');
+Route::get('/sekretaris/arsip/{id}/edit', [ArsipController::class, 'edit'])->name('arsip.edit');
+Route::put('/sekretaris/arsip/{id}', [ArsipController::class, 'update'])->name('arsip.update');
+Route::delete('/sekretaris/arsip/{id}', [ArsipController::class, 'destroy'])->name('arsip.destroy');
+// Tampilkan form tambah kategori
+Route::get('/sekretaris/kategori/create', [KategoriController::class, 'create'])->name('sekretaris.kategori.create');
+// Simpan data kategori
+Route::post('/sekretaris/kategori', [KategoriController::class, 'store'])->name('sekretaris.kategori.store');
+// Form edit kategori
+Route::get('/sekretaris/kategori/{id}/edit', [KategoriController::class, 'edit'])->name('sekretaris.kategori.edit');
+// Proses update kategori
+Route::put('/sekretaris/kategori/{id}', [KategoriController::class, 'update'])->name('sekretaris.kategori.update');
+Route::delete('/sekretaris/kategori/{id}', [KategoriController::class, 'destroy'])->name('sekretaris.kategori.destroy');
+Route::get('/sekretaris/arsip/{id}/download', [ArsipController::class, 'download'])->name('sekretaris.arsip.download');
+});
+
+// Arsip - Khusus Kepala Desa
+Route::middleware(['auth', 'kepala'])->group(function () {
+    Route::get('/kepala/arsip', [ArsipController::class, 'index'])->name('kepala.arsip.index');
+    Route::get('/kepala/arsip/{id}/download', [ArsipController::class, 'download'])->name('kepala.arsip.download');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profil/create', [ProfilController::class, 'create'])->name('profil.create');
+    Route::post('/profil/store', [ProfilController::class, 'simpanProfil'])->name('profil.store');
+    Route::get('/profil/show', [ProfilController::class, 'show'])->name('profil.show');
+    Route::get('/profil/edit', [ProfilController::class, 'edit'])->name('profil.edit');
+    Route::put('/profil/update', [ProfilController::class, 'update'])->name('profil.update');
+    Route::get('/{role}/arsip/{id}/view', [ArsipController::class, 'view'])->name('arsip.view');
+});
+
 

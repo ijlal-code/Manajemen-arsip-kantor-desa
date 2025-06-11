@@ -16,6 +16,6 @@ class SekretarisMiddleware
         }
 
         // Jika bukan sekretaris, arahkan ke halaman login
-        return redirect()->route('dashboard');
+        return redirect()->route('login');
     }
 }

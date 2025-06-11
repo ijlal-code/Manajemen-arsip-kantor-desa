@@ -19,7 +19,7 @@ class User extends Authenticatable
     }
 
     public function aksesArsips() {
-        return $this->belongsToMany(Arsip::class, 'arsip_user');
+        return $this->belongsToMany(Arsip::class, 'arsip_user')->using(ArsipUser::class)->withTimestamps();
     }
 
     public function profil()

@@ -16,6 +16,6 @@ class AdminMiddleware
         }
 
         // Jika bukan admin, redirect ke halaman lain (misalnya ke halaman login)
-        return redirect()->route('dashboard');
+        return redirect()->route('login');
     }
 }
