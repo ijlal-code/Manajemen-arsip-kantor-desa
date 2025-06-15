@@ -123,7 +123,7 @@ class ArsipController extends Controller
             $arsip->update($data);
     
             DB::commit();
-            return redirect()->route($this->getIndexRouteByRole())->with('success', 'Arsip berhasil dihapus.');
+            return redirect()->route($this->getIndexRouteByRole())->with('success', 'Arsip berhasil diperbarui.');
         } catch (\Exception $e) {
             DB::rollBack();
             \Log::error('Gagal memperbarui arsip: ' . $e->getMessage("s"));
@@ -153,12 +153,7 @@ class ArsipController extends Controller
 
     public function download($id) {
         $arsip = Arsip::findOrFail($id);
-    
-        // Otorisasi (opsional, tergantung kebutuhan)
-        // if (auth()->user()->role == 'sekretaris' && $arsip->user_id != auth()->id()) {
-        //     abort(403);
-        // }8
-    
+        
         $path = storage_path('app/public/' . $arsip->file_arsip);
     
         if (!file_exists($path)) {

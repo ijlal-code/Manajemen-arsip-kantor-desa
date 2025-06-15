@@ -16,7 +16,7 @@ Route::get('/', function () {
 
 
 
-// Route::resource('arsip', ArsipController::class);
+
 
 
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
