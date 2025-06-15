@@ -68,7 +68,7 @@ Route::get('/sekretaris/arsip/create', [ArsipController::class, 'create'])->name
 Route::post('/sekretaris/arsip/store', [ArsipController::class, 'store'])->name('sekretaris.arsip.store');
 Route::get('/sekretaris/arsip/{id}', [ArsipController::class, 'show'])->name('arsip.show');
 Route::get('/sekretaris/arsip/{id}/edit', [ArsipController::class, 'edit'])->name('arsip.edit');
-Route::put('/sekretaris/arsip/{id}', [ArsipController::class, 'update'])->name('arsip.update');
+Route::put('/sekretaris/arsip/{id}', [ArsipController::class, 'update'])->name('sekretaris.arsip.update');
 Route::delete('/sekretaris/arsip/{id}', [ArsipController::class, 'destroy'])->name('arsip.destroy');
 // Tampilkan form tambah kategori
 Route::get('/sekretaris/kategori/create', [KategoriController::class, 'create'])->name('sekretaris.kategori.create');
